@@ -12,7 +12,6 @@ angular.module('worldsensing')
 
         controller.goTo = function(name){
             $state.go(name);
-            console.log(name);
         };
 
         controller.isState= function(name){

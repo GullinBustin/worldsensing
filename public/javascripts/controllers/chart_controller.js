@@ -20,7 +20,6 @@ angular.module('worldsensing')
 
 
             for(var key in controller.pollution.cities){
-                console.log(controller.pollution.cities[key].pollutants.breezometer_color);
                 dataArray.push([controller.pollution.cities[key].name, controller.pollution.cities[key].pollutants.breezometer_aqi, controller.pollution.cities[key].pollutants.breezometer_color.toLowerCase()]);
             }
 
@@ -28,7 +27,6 @@ angular.module('worldsensing')
 
             var options = {
                 'title':'Air Quality In Top 10 Most Populated Cities',
-                'width':900,
                 'height':500
             };
 
