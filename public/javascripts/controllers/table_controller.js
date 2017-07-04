@@ -8,7 +8,4 @@ angular.module('worldsensing')
 
         controller.pollution = pollutionService;
 
-
-
-
     }]);

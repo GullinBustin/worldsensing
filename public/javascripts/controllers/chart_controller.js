@@ -27,7 +27,7 @@ angular.module('worldsensing')
             var data = google.visualization.arrayToDataTable(dataArray);
 
             var options = {
-                'title':'Air Quality In Top 10 Poblated Cities',
+                'title':'Air Quality In Top 10 Most Populated Cities',
                 'width':900,
                 'height':500
             };
