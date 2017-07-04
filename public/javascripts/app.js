@@ -6,12 +6,19 @@ angular.module('worldsensing', ['ui.router'])
         $urlRouterProvider
             .otherwise('/');
         $stateProvider
-            .state('home',{
-                url: '',
-                templateUrl: 'views/home.html',
-                controller: "HomeController",
-                controllerAs: "HomeCtrl"
-            });
+            .state('table',{
+                url: '/',
+                templateUrl: 'views/tableView.html',
+                controller: "TableController",
+                controllerAs: "TableCtrl"
+            })
+            .state('chart',{
+                url: '/',
+                templateUrl: 'views/chartView.html',
+                controller: "ChartController",
+                controllerAs: "ChartCtrl"
+            })
+        ;
     })
     .run(['$rootScope', '$state', '$stateParams', function ($rootScope, $state, $stateParams ) {
 

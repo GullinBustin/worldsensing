@@ -5,8 +5,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
 var countryPollution = require('./routes/countryPollution');
 
 var mongoConfig = require('./services/mongoConfig');
@@ -28,8 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 mongoConfig(updatePollution);
 
-app.use('/', index);
-app.use('/users', users);
+
 app.use('/countryPollution', countryPollution);
 
 

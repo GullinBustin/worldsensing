@@ -36,7 +36,7 @@ var updatePollution = function () {
 
                 var setDoc = {
                     $set: {
-                        pollutants: parsed.breezometer_aqi
+                        pollutants: parsed
                     }
                 };
 

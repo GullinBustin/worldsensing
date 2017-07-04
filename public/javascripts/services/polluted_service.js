@@ -6,7 +6,7 @@ angular.module('worldsensing')
 
         store.cities = [];
 
-/*
+
         var observerCallbacks = [];
         this.registerObserverCallback = function (callback) {
             observerCallbacks.push(callback);
@@ -17,13 +17,15 @@ angular.module('worldsensing')
                 callback();
             });
         };
-*/
+
 
         $http.get('countryPollution').success(function (data) {
             for (var key in data.data){
                 store.cities[key] = data.data[key];
             }
             console.log(store.cities);
+            notifyObservers();
+
         });
 
     });
